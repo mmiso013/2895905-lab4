@@ -1,1 +1,47 @@
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.1); /* Light grey track */
+    border-top: 4px solid lightseagreen;   /* The moving part */
+    border-radius: 50%;                  /* Makes it a circle */
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
+.country-card {
+    background: lightseagreen;
+    padding: 24px;              /* ~1cm is about 38px, 24px feels more standard */
+    border-radius: 12px;        /* Softens the look */
+    color: white;               /* Better contrast with lightseagreen */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.border-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 1px;                              /* This creates the "border" line */
+    background-color: #ccc;                /* Color of the grid lines */
+    border: 1px solid #ccc;                /* Outer border */
+    color: black;
+}
+
+.error {
+    color: #721c24;                /* Darker red for text readability */
+    background-color: #f8d7da;     /* Soft pink/red background */
+    border: 1px solid #f5c6cb;     /* Subtle border */
+    border-left: 5px solid #d9534f; /* Thick bold line on the left */
+    padding: 12px 20px;            /* Internal spacing */
+    margin: 10px 0;                /* External spacing from other elements */
+    border-radius: 4px;            /* Rounded corners */
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
